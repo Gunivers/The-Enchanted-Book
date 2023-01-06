@@ -9,6 +9,7 @@
 project = 'The Enchanted Book'
 copyright = '2023, Gunivers'
 author = 'Gunivers'
+language="fr"
 
 html_theme_options = {
     "home_page_in_toc": False,
