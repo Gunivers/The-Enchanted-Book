@@ -33,7 +33,7 @@
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Test" href="Chapter_1.html" />
+    <link rel="next" title="1. Les supports des commandes" href="1-support.html" />
     <link rel="prev" title="The Enchanted Book" href="../index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -71,6 +71,11 @@
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.gif" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">The Enchanted Book  documentation</h1>
@@ -98,8 +103,13 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Chapter_1.html">
-     Test
+    <a class="reference internal" href="1-support.html">
+     1. Les supports des commandes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2-blocs%26entit%C3%A9s.html">
+     2. Blocs &amp; Entités
     </a>
    </li>
   </ul>
@@ -169,6 +179,51 @@ title="Fullscreen mode"
 
 </button>
 
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/Gunivers/The-Enchanted-Book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/Gunivers/The-Enchanted-Book/edit/EN/development/main.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
       aria-label="Download this page">
@@ -177,7 +232,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Development/Main.md.txt"
+        <a href="../_sources/development/main.md.txt"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -214,12 +269,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organisation-du-guide">
+   Organisation du guide
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sommaire">
+   Sommaire
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -231,6 +315,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organisation-du-guide">
+   Organisation du guide
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sommaire">
+   Sommaire
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -238,14 +340,64 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="development-guide">
+  <section class="tex2jax_ignore mathjax_ignore" id="development-guide">
 <h1>Development guide<a class="headerlink" href="#development-guide" title="Permalink to this headline">#</a></h1>
-<p>yolo</p>
+<p>L’aspect développement, bien que relativement caché pour la plupart des joueurs, fait partie intégrante de la création dans Minecraft. Pour certains, il s’agit là d’une façon d’exploiter le jeu sous des angles nouveaux, et pour d’autre s’agit d’une forme de magie occulte et terrifiante, dont le simple fait de mentionner le mot “commande”  provoque des maux de tête.</p>
+<p>Aujourd’hui nous avons décidé, de démystifier cet aspect complexe du jeu et de vous laisser entrevoir les nombreuses possibilités qui vous sont finalement à porté de main.</p>
+<p>À tous ceux qui sont lassés des nombreux tutoriels déjà existant : NE FUYEZ PAS ! Cette série n’aura pas pour objectif de vous transmettre une liste indigeste de commandes complexes en vous les expliquant une à une (ça fait beaucoup trop de choses à retenir pour nos petites têtes humaines). Nous allons essayer de vous enseigner les mécaniques et la logique qui se cache derrière. Logique à laquelle, si vous y ajoutez une simple connaissance de base, un esprit curieux – et un peu de patience –  vous permettra de réaliser à peu près tout ce que vous pouvez imaginer !</p>
+<p>Ainsi, nous vous proposerons de découvrir les différents éléments majeurs du développement en commandes au rythme d’un article toutes les deux semaines. Le tout sera suivi d’annexes et de bonus pour plus d’informations, sans oublier quelques exercices pratiques permettant de vous aider à mieux saisir les concepts évoqués. Veillez à les faire tranquillement, à tête reposée avec une bonne bière (ou un soda pour les plus jeunes) et une musique d’ambiance : votre apprentissage vous paraîtra plus doux et agréable.</p>
+<p>Cet article sera le premier d’une série qui sera publiée à rythme fixe, un jeudi sur deux.</p>
+<hr class="docutils" />
+<section id="organisation-du-guide">
+<h2>Organisation du guide<a class="headerlink" href="#organisation-du-guide" title="Permalink to this headline">#</a></h2>
+<p>Ce guide se verra appliquer une syntaxe particulière aux patterns des commandes, par exemple :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">setblock</span> <span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span><span class="p">[</span><span class="n">blockState</span><span class="p">][</span><span class="n">NBT</span><span class="p">]</span> <span class="p">[</span><span class="n">replace</span><span class="o">|</span><span class="n">keep</span><span class="o">|</span><span class="n">destroy</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tout ce qui suit le premier mot de la commande (ici “setblock”) est appelé “paramètres”.</p>
+</div>
+<p>Voici une explication de la syntaxe utilisée :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;…&gt;</span></code> paramètre obligatoire</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[…]</span></code> paramètre optionnel</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[…|…]</span></code> ou <code class="docutils literal notranslate"><span class="pre">&lt;…|…&gt;</span></code> paramètre à choisir parmis les différents éléments précisés, l’élément en gras étant l’élément par défaut si le paramètre est optionnel.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="sommaire">
+<h2>Sommaire<a class="headerlink" href="#sommaire" title="Permalink to this headline">#</a></h2>
+<p>Voici un sommaire des différents articles de cette série. Lors de la parution de l’un d’eux, le lien vers l’article sera ajouté à ce sommaire.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Chapter_1.html">Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-support.html">1. Les supports des commandes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-support.html#developper-ca-veut-dire-quoi-exactement">Développer ? Ça veut dire quoi exactement ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-support.html#le-chat-textuel">Le chat textuel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-support.html#les-blocs-de-commande">Les blocs de commande</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1-support.html#les-types-de-command-blocks">Les types de command-blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1-support.html#les-mcfunctions">Les MCfunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-support.html#retour-de-commandes">Retour de commandes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2-blocs%26entit%C3%A9s.html">2. Blocs &amp; Entités</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-blocs%26entit%C3%A9s.html#blocs">Blocs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2-blocs%26entit%C3%A9s.html#creation">Création</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2-blocs%26entit%C3%A9s.html#selection">Sélection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2-blocs%26entit%C3%A9s.html#entites">Entités</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2-blocs%26entit%C3%A9s.html#id1">Création</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2-blocs%26entit%C3%A9s.html#id2">Sélection</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -263,10 +415,10 @@ title="Print to PDF"
             <p class="prev-next-title">The Enchanted Book</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Chapter_1.html" title="next page">
+    <a class='right-next' id="next-link" href="1-support.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Test</p>
+        <p class="prev-next-title">1. Les supports des commandes</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

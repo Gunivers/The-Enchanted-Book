@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Blocs &amp; Entités &#8212; The Enchanted Book  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="1. Les supports des commandes" href="1-support.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.gif" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Enchanted Book  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="main.html">
+   Development guide
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1-support.html">
+     1. Les supports des commandes
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2. Blocs &amp; Entités
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/Gunivers/The-Enchanted-Book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/Gunivers/The-Enchanted-Book/edit/EN/development/2-blocs&entités.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/development/2-blocs&entités.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blocs">
+   Blocs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creation">
+     Création
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selection">
+     Sélection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entites">
+   Entités
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Création
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Sélection
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2. Blocs & Entités</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blocs">
+   Blocs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creation">
+     Création
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#selection">
+     Sélection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entites">
+   Entités
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Création
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Sélection
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="blocs-entites">
+<h1>2. Blocs &amp; Entités<a class="headerlink" href="#blocs-entites" title="Permalink to this headline">#</a></h1>
+<p>Maintenant que nous avons vu les différents supports de commandes, nous allons commencer à rentrer dans le vif du sujet en parlant des différents objets que vous allez manipuler.</p>
+<p>Si vous avez une vague connaissance à propos du fonctionnement d’un jeu vidéo, vous devriez être au courant qu’il existe plusieurs types d’objets (pour ceux qui s’y connaissent vraiment dans le domaine, il s’agit là d’une liste non exhaustive évidemment).</p>
+<ul class="simple">
+<li><p><strong>L’environnement</strong> constitué ici de blocs, qui sont des formes géométriques de base. Ces derniers sont persistants, c’est-à-dire que chaque modification apportée à ces blocs restera telle quelle jusqu’à ce qu’une autre modification vienne changer leur état.</p></li>
+<li><p><strong>Les entités</strong> constituent toute la partie “active” d’un jeu et sont à l’origine de la plupart des actions de ce dernier. Dans Minecraft, il s’agit de créatures, qu’elles soient gentilles, neutres, méchantes ou encore des joueurs !</p></li>
+<li><p><strong>Les particules</strong> permettent de faire des effets visuels et de dynamiser le jeu (en plus des animations appliquées à ces 3 types d’objets).</p></li>
+</ul>
+<p>Ce qui va nous intéresser aujourd’hui, c’est est de voir comment sont construits ces objets et comment on peut les manipuler. Vu que la manipulation est pour chaque objet dissemblable, nous allons séparer ces explications en deux parties.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>À savoir : Une particule, à la différence des blocs et entités, ne peut être ni modifiée ni même être détecté une fois créée. Elle ne possède donc pas de sélecteur et ne peut, dans Minecraft, pas être « gérée » après sa création. Nous ne parlerons donc pas des particules car leur utilisation ne se résume qu’à une seule commande (leur création via /particle).</p>
+</div>
+<hr class="docutils" />
+<section id="blocs">
+<h2>Blocs<a class="headerlink" href="#blocs" title="Permalink to this headline">#</a></h2>
+<section id="creation">
+<h3>Création<a class="headerlink" href="#creation" title="Permalink to this headline">#</a></h3>
+<p>Construire ces objets sera une tâche relativement facile, car chacun possède une commande prévue à cet effet. Ainsi, pour les blocs, cette commande est la suivante :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">setblock</span> <span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span><span class="p">[</span><span class="n">blockState</span><span class="p">][</span><span class="n">NBT</span><span class="p">]</span> <span class="p">[</span><span class="n">replace</span><span class="o">|</span><span class="n">destroy</span><span class="o">|</span><span class="n">keep</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Grâce à elle, vous pouvez poser un bloc à la position donnée. Le “type” correspond au bloc Minecraft que vous souhaitez placer ou, si vous préférez, à son matériau (pierre, terre, bois, etc). Vous remarquerez que seuls les deux premiers paramètres sont obligatoires. Dans la plupart des cas (les cas les plus simples), vous n’aurez donc qu’a vous souvenir de cette syntaxe :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">setblock</span> <span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Vous pouvez afficher les identifiants de chacun des blocs grâce au raccourci “F3”, puis en visant le bloc, ou bien par le raccourci “F3 + H”. Son identifiant sera alors affiché sous le nom de l’item pointé par votre souris.</p>
+</div>
+<p>Le dernier paramètre permet de modifier le comportement de la commande. Trois sous-paramètres différents sont disponibles :</p>
+<ul class="simple">
+<li><p>“replace” (paramètre par défaut) : permet de placer le bloc peu importe le bloc d’origine.</p></li>
+<li><p>“destroy” : pose le bloc en détruisant le bloc précédent, générant ainsi des particules et lâchant l’item correspondant à ce dernier.</p></li>
+<li><p>“keep” : permet de ne placer le bloc que si de l’air se trouvait à la position précisée.</p></li>
+</ul>
+<p>Enfin, “blockState” et “NBT” correspondent aux propriétés du bloc. Le “blockState” définit la forme du bloc si celui-ci en possède plusieurs (orientation, âge de la plante, forme de l’escalier, etc.) tandis que “NBT” est une structure de données définissant les informations stockées par le bloc. Les quelques blocs possédant cette structure sont appelés “Block Entity”, catégorie où l’on peut retrouver entre autres les coffres, les panneaux, les têtes, les jukeboxes, ou les lits. Nous reviendrons sur les NBTs un peu plus tard dans ce guide.</p>
+<p>On peut différencier ces deux structures par la façon dont elles sont délimitées. Ainsi le “blockState” se trouvera entre deux crochets “[]” et le “NBT” entre deux accolades “{}”.</p>
+<p>Voici un exemple afin de mieux comprendre la syntaxe :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">setblock</span> <span class="mi">10</span> <span class="mi">11</span> <span class="mi">12</span> <span class="n">furnace</span><span class="p">[</span><span class="n">lit</span><span class="o">=</span><span class="n">true</span><span class="p">]{</span><span class="n">Items</span><span class="p">:[{</span><span class="nb">id</span><span class="p">:</span><span class="n">slime_ball</span><span class="p">,</span><span class="n">Slot</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">Count</span><span class="p">:</span><span class="mi">1</span><span class="p">}]}</span> <span class="n">keep</span>
+</pre></div>
+</div>
+<p>Placera un four à l’apparence allumée et possédant une Slime Ball dans le slot de cuisson aux coordonnées x=10, y=11 et z=12 seulement si le bloc d’origine était de l’air.</p>
+</section>
+<section id="selection">
+<h3>Sélection<a class="headerlink" href="#selection" title="Permalink to this headline">#</a></h3>
+<p>Afin de manipuler les blocs, vous aurez à disposition une panoplie de commandes telles que :</p>
+<ul class="simple">
+<li><p>/setblock <position> <type> …</p></li>
+<li><p>/fill <position1> <position2> <type> …</p></li>
+<li><p>/data merge block <position> …</p></li>
+<li><p>/clone <position1> <position2> <position3> …</p></li>
+</ul>
+<p>Vous trouverez l’explication officielle de chacune de ces commandes en cliquant dessus. Ce qui va nous intéresser ici, ce sont les paramètres “<position>”. Tout à l’heure nous avons vu que si nous mettions “10 11 12” dans ce paramètre, notre bloc allait se situer à la position x=10, y=11 et z=12. Mais qu’est-ce que ça signifie exactement ?</p>
+<p><img alt="" src="../_images/2023-01-06-10-28-34.png" /></p>
+<p>En appuyant sur “F3”, plein de données devraient apparaître comme sur l’image ci-dessus. Ces dernières permettent de s’y retrouver plus facilement afin de créer ou débugger un système (ou du moins, c’est de cette façon que nous allons les utiliser). Au centre, vous pouvez voir ce qu’on appelle un repère. Ce dernier contient 3 lignes orientées chacune vers le côté positif de l’axe qu’elle représente :</p>
+<ul class="simple">
+<li><p>Axe rouge: correspond à l’axe X</p></li>
+<li><p>Axe vert: correspond à l’axe Y</p></li>
+<li><p>Axe bleu: correspond à l’axe Z</p></li>
+</ul>
+<p>Une position sera définie grâce à une valeur sur chacun des axes. Vous pouvez voir en haut à gauche de l’image votre position actuelle (“XYZ: …”) ainsi que la position du bloc dans lequel vous vous trouvez (“Block: …”). Enfin, sur les côtés de l’image, vous pouvez connaître la position et le type de bloc que vous visez, vous permettant de les éditer facilement avec une commande.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lorsque vous écrivez une commande avec un paramètre permettant de désigner la position d’un bloc, Minecraft vous suggérera toujours le bloc que vous visez. Si vous n’en visez aucun, il vous suggérera votre position actuelle. En appuyant sur ‘tab’, vous pourrez utiliser l’auto-complétion des commandes qui prendra la valeur suggérée.</p>
+</div>
+<p>Bon, connaître la position des blocs c’est bien, mais ça reste assez limité. Si par exemple vous souhaitez placer un bloc à côté d’un joueur, vous allez être embêtés car vous ne connaissez pas la position où vous devez placer le bloc. C’est pour cette raison qu’il existe 3 types de coordonnées :</p>
+<ul>
+<li><p><strong>Coordonnées absolues</strong> (ex: 1 2 3) : celle que vous apercevez dans le menu ‘F3’. Si tous les joueurs font un /setblock avec une même coordonnée absolue, chacun d’eux changera le même bloc.</p></li>
+<li><p><strong>Coordonnées relatives</strong> (ex: ~1 ~2 ~3) : ici, ces coordonnées ne dépendent plus de la map en elle-même (et son centre en 0 0 0) mais du joueur (ou entité ou bloc) qui exécute la commande. Ainsi, un “/setblock” avec les coordonnées ~1 ~2 ~3 placera un bloc à proximité de la position où la commande a été exécutée. Si votre position est 20 20 20, le bloc se placera en 21 22 23 (20+1, 20+2 et 20+3). Le nombre est préfixé d’un tilde ‘~’.</p></li>
+<li><p><strong>Les coordonnées locales</strong> (ex: ^1 ^2 ^3) : ces dernières sont plus complexes car dépendant de l’orientation de l’entité ayant exécuté la commande. Ainsi, un “/setblock ^1 ^2 ^3 stone” placera un bloc de pierre 1 bloc à gauche du joueur, 2 blocs au-dessus de sa tête et 3 blocs devant lui.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Si le joueur regarde le ciel, 2 blocs au-dessus de la tête du joueur correspondront à 2 blocs derrière son corps joueur car sa tête et son corps sont orientés différemment et nous parlons bien ici de l’orientation de sa tête. Le nombre est préfixé d’un accent circonflexe.</p>
+</div>
+</li>
+</ul>
+<div align=center>
+<p><img alt="" src="../_images/2023-01-06-10-30-07.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ce système de coordonnées ne fonctionne pas seulement pour placer un bloc ou sélectionner un bloc mais bien pour toutes autres commandes nécessitant une position pour paramètre. Note : Il est possible de mélanger les 2 premiers types de coordonnées dans un même paramètre (ex: 10 ~11 12).</p>
+</div>
+<p>Enfin, vous vous demandez sûrement pourquoi dans certaines commandes comme le “/fill”, il y a deux paramètres “position”. Il s’agit en fait d’un moyen  pour sélectionner une zone de blocs et non un seul bloc. Vous devrez donc sélectionner la position des deux extrémités de votre zone (qui prend la forme d’un parallélépipède rectangle), à savoir celle du bloc violet et celle du bloc jaune sur l’image ci-dessous.</p>
+<p><img alt="" src="../_images/2023-01-06-10-30-54.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour la commande “/clone”, un troisième paramètre “” est demandé. Ce dernier sert à définir la position à laquelle la zone sélectionnée par les deux premiers paramètres sera placée. La zone se placera alors de sorte à ce que son extrémité ayant les coordonnées les moins élevées correspond avec les coordonnées données dans ce troisième paramètre. Dans l’image ci-dessus, la zone se placera de façon à ce que le bloc violet soit placé aux coordonnées précisées dans le , comme nous le montre le repère placé sur la boîte délimitant la zone.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="entites">
+<h2>Entités<a class="headerlink" href="#entites" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3>Création<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Maintenant que nous avons vu comment créer et modifier l’environnement, nous allons nos attaquer aux entités. Ces entités seront le cœur de vos maps car elles représenteront à la fois les pièces mobiles et les éléments actifs rendant votre map dynamique. Afin d’invoquer une entité, nous utiliserons la commande :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">summon</span> <span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">NBT</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Comme pour les blocs, la position sert à définir où l’entité va être créée. Quant au type, il s’agit cette fois de la nature de l’entité que vous souhaitez invoquer (Creeper, Zombie, Loup etc.). Pour les NBT, un article entier leur sera consacré, nous verrons donc ça plus tard. <em>Spoiler, ces propriétés serviront à customiser vos créatures (leur donner une armure, un effet de potion etc.).</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il est impossible d’invoquer un joueur. Leur intelligence est trop complexe pour être créés de cette façon :/</p>
+</div>
+</section>
+<section id="id2">
+<h3>Sélection<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>Pour préciser une entité, il faut utiliser ce qu’on appelle un “sélecteur”. Ce dernier existe sous plusieurs formes :</p>
+<ul class="simple">
+<li><p>&#64;e (entity) : permet de sélectionner toutes les entités (joueur ou non) ;</p></li>
+<li><p>&#64;a (all) : permet de sélectionner tous les joueurs ;</p></li>
+<li><p>&#64;p (proximity) : permet de sélectionner le (ou “les” si un nombre est spécifié entre crochets) joueurs les plus proches de l’endroit où est exécuté la commande (cf. “Les /execute”) ;</p></li>
+<li><p>&#64;r (random) : permet de sélectionner un (ou plusieurs si un nombre est spécifié entre crochets) joueur aléatoire ;</p></li>
+<li><p>&#64;s (self) : permet de sélectionner l’entité ayant exécuté la commande (cf. “Les /execute”) ;</p></li>
+<li><p><Psuedo> : Peut être utilisée comme raccourcit pour “&#64;a[name=<Pseudo>]” ou comme sélecteur de joueur virtuel (ou “fake player”, correspondant à un pseudo associé à aucun joueur ou à un joueur déconnecté) ;</p></li>
+<li><ul>
+<li><p>: Sélectionne toutes entités, vivantes ou mortes, connectées ou non, réelles ou virtuelles (là où le &#64;e ne sélectionne “que” les entités réelles vivantes et connectées).</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Une bonne partie de ces sélecteurs sont vieux et vous vous rendrez compte que seul le &#64;e, le &#64;s et l’astérisque (*) conservent toujours un véritable intérêt en 1.13 et au-delà. Les autres ne servent désormais qu’à “alléger” les commandes en évitant de devoir écrire certaines conditions.</p>
+</div>
+<p>Ces différents sélecteurs (à l’exception de “<Pseudo>” et de l’astérisque) sont souvent directement suivis de crochets permettant l’ajout de conditions. Par exemple, si vous souhaitez sélectionner jusqu’à 3 joueurs se trouvant entre 5 et 10 blocs de distance de vous, vous n’aurez qu’à utiliser ce sélecteur:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@a</span><span class="p">[</span><span class="n">distance</span><span class="o">=</span><span class="mf">5..10</span><span class="p">,</span><span class="n">limit</span><span class="o">=</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Comme dit précédemment, seul le &#64;e et &#64;s ont un réel intérêt. Vous pouvez aussi bien utiliser le sélecteur “&#64;e[type=player,distance=5…10,limit=3]”.</p>
+</div>
+<p>Depuis la version 1.13, les choses sont devenues relativement simples à comprendre. Ici, pas besoin d’expliquer “distance=5…10” pour comprendre que ça ne sélectionne que les entités qui sont entre 5 et 10 blocs de distance. La seule difficulté sera de se rappeler des conditions possibles à utiliser dans ces sélecteurs. Voici une liste des plus fréquemment utilisés :</p>
+<ul class="simple">
+<li><p>x=&lt;VALEUR&gt;</p></li>
+<li><p>y=&lt;VALEUR&gt;</p></li>
+<li><p>z=&lt;VALEUR&gt;</p></li>
+<li><p>distance:&lt;INTERVALLE&gt;</p></li>
+<li><p>dx=&lt;VALEUR&gt;</p></li>
+<li><p>dy=&lt;VALEUR&gt;</p></li>
+<li><p>dz=&lt;VALEUR&gt;</p></li>
+<li><p>type=&lt;TYPE&gt;</p></li>
+<li><p>limit=&lt;VALEUR&gt;</p></li>
+<li><p>sort=&lt;nearest|random|furthest|arbitrary&gt;</p></li>
+<li><p>tag=&lt;TAG&gt;</p></li>
+<li><p>scores={&lt;SCORE1&gt;=&lt;INTERVALLE&gt;}</p></li>
+</ul>
+<p>Essayons de voir ce que chacun d’eux permet de faire :</p>
+<ul class="simple">
+<li><p><strong>“x=…”, “y=…” et “z=…”</strong> permettent d’indiquer une coordonnée absolue (coordonnée qui servira notamment à la condition “distance=”).</p></li>
+<li><p><strong>“distance=…”</strong> sert à définir une… distance. Pour que l’entité valide cette condition, elle doit se trouver dans l’intervalle de distance précisé en valeur (nous y reviendrons un peu plus en détail en dessous). L’intervalle peut être composé de nombre à virgule afin d’augmenter la précision.</p></li>
+<li><p><strong>“dx=…”, “dy=…” et “dz=…”</strong> servent à désigner une distance sur chacun des axes (là où le “distance=” permet de définir une zone sphérique, “dx=”, “dy=” et “dz=” permettent de faire une zone rectangulaire orientée vers le positif).</p></li>
+<li><p><strong>“type=…”</strong> permet de restreindre (ou exclure si vous mettez “type=!…”) à un type d’entité (ex: &#64;e[type=creeper] ne sélectionnera que les creepers)</p></li>
+<li><p><strong>“limit=…”</strong> permet de définir un nombre maximum d’entité à sélectionner.</p></li>
+<li><p><strong>“sort=…”</strong> permet, dans le cas où le nombre d’entités est limité, de définir quelles entités vont être sélectionnés. Ainsi, “nearest” prendra les entités les plus proches, “furthest” prendra les entités les plus lointaines, “random” prendra les entités aléatoirement et “arbitrary” n’appliquera aucun tri rendant donc la commande plus optimisée.</p></li>
+<li><p><strong>“tag=…”</strong> permet de conserver (ou exclure si vous mettez “tag=!…”) les entités portant un tag précis. Nous verrons en quoi consistent les tags dans un autre chapitre.</p></li>
+<li><p><strong>“scores=…”</strong> permet de conserver les entités ayant des scores correspondant à ceux indiqués. Nous verrons en quoi consistent les scores dans un autre chapitre.</p></li>
+</ul>
+<p>La valeur INTERVALLE suit une syntaxe un peu particulière, elle permet de valider la condition si le nombre se trouve entre deux bornes (cas 1) ou s’il est exactement égal au nombre précisé (cas 2) :</p>
+<ul class="simple">
+<li><p>[min]…[max] : Permet donc de valider si le nombre se trouve entre les deux bornes (incluses). Les paramètres sont optionnels car il est possible de ne pas spécifier l’une ou l’autre des bornes de façon à comprendre soit toutes les valeurs plus petites que max soit toutes les valeurs plus grandes que min.</p></li>
+<li><p>[valeur] : Permet de valider la condition si le nombre est strictement égal à celui précisé.</p></li>
+</ul>
+<p>Les valeurs bornant l’intervalle peuvent être, si le paramètre l’accepte, des nombres à virgule, mais attention : dans le cas numéro 2, 64 sera différent de 64.001 ! Attention, par convention, les décimales sont séparées des entiers par des points et non des virgules comme nous avons l’habitude en France.</p>
+<p>::{note}
+Pour être sélectionnée, l’entité doit répondre à toutes les conditions du sélecteur, il s’agit donc, pour ceux qui ont quelques connaissances en algorithmique ou en électronique, d’un “et logique” entre chaque paramètre. Pour faire un “ou logique” vous devrez passer par un système de commande qui ajoute un tag (ou autres) si telle ou telle condition est validée. Vous exécuterez ensuite la commande si vous détectez la présence de ce tag.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+---
+## Conclusion
+
+Maintenant, vous maîtrisez les bases des objets manipulables dans Minecraft. Même si pour l’instant, cela peut vous paraître seulement à fin décorative pour votre map ou vos entités, vous vous rendrez assez vite compte que cela peut aussi être un moyen de parvenir à des résultats plus complexes, notamment avec le prochain article qui parlera de la commande 1.13 qui a radicalement changé nos façons de concevoir nos systèmes : la commande exécute.
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1-support.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">1. Les supports des commandes</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Gunivers<br/>
+  
+      &copy; Copyright 2023, Gunivers.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

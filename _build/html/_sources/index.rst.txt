@@ -10,6 +10,6 @@ The Enchanted Book
    :maxdepth: 2
    :caption: Contents:
 
-   Development/Main
+   development/main
 
 
