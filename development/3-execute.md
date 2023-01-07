@@ -111,6 +111,7 @@ C’était un piège, qui va me permettre de vous faire remarquer quelque chose 
 
 :::{warning}
 Certaines commandes peuvent toutefois s’intéresser à la fois à la position et à la source. Il est donc généralement recommandé, si vous n’êtes pas sûr de vous, de faire un « as @e[…] » directement suivit d’un « at @s » (ce qui revient à faire un /execute d’avant la 1.13)
+:::
 
 > Oui mais … « at @a » du coup ça fait quoi ?
 

@@ -1,4 +1,4 @@
-# Development guide
+# Guide de développement
 
 L’aspect développement, bien que relativement caché pour la plupart des joueurs, fait partie intégrante de la création dans Minecraft. Pour certains, il s’agit là d’une façon d’exploiter le jeu sous des angles nouveaux, et pour d’autre s’agit d’une forme de magie occulte et terrifiante, dont le simple fait de mentionner le mot “commande”  provoque des maux de tête.
 

@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'The Enchanted Book'
+project = 'Le Live Enchanté'
 copyright = '2023, Gunivers'
 author = 'Gunivers'
 language="fr"
