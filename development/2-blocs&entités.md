@@ -181,7 +181,7 @@ La valeur INTERVALLE suit une syntaxe un peu particulière, elle permet de valid
 
 Les valeurs bornant l’intervalle peuvent être, si le paramètre l’accepte, des nombres à virgule, mais attention : dans le cas numéro 2, 64 sera différent de 64.001 ! Attention, par convention, les décimales sont séparées des entiers par des points et non des virgules comme nous avons l’habitude en France.
 
-::{note}
+:::{note}
 Pour être sélectionnée, l’entité doit répondre à toutes les conditions du sélecteur, il s’agit donc, pour ceux qui ont quelques connaissances en algorithmique ou en électronique, d’un “et logique” entre chaque paramètre. Pour faire un “ou logique” vous devrez passer par un système de commande qui ajoute un tag (ou autres) si telle ou telle condition est validée. Vous exécuterez ensuite la commande si vous détectez la présence de ce tag.
 :::
 

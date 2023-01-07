@@ -38,4 +38,5 @@ Voici un sommaire des différents articles de cette série. Lors de la parution 
 ```{toctree}
 1-support.md
 2-blocs&entités.md
+3-variables.md
 ```
